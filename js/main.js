@@ -91,8 +91,7 @@ function displayFinalAnswer(){
     document.getElementById("screen").innerText = final_answer
 }
 
-function processAnswer()
-{
+function processAnswer(){
     if (input_array.length!=0){
         var signs = ['/','x','+','-'];
         signs.forEach((el)=>{
@@ -103,14 +102,14 @@ function processAnswer()
     }
 }
 
-function getAllIndexes(val) {
+function getAllIndexes(val){
     var i;
-    for(i = 0; i < input_array.length; i++)
+    for(i = 0; i < input_array.length; i++){
         if (input_array[i] === val){
             var ans = operate(val, input_array[i - 1 ], input_array[i + 1]);
-            console.log("Index: " +i);
             console.log(input_array[i - 1 ] , val , input_array[i + 1], ans);
             input_array.splice(i-1, 3, ans);
             i = i-1
         } 
+    }
 }
