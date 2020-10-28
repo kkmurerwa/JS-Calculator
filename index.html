@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Calculator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap Css -->
+	<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+	<!-- Custom CSS -->
+	<link rel='stylesheet' type='text/css' href='css/main.css'>
+</head>
+<body>
+	<div class="container">
+        <div class="row">
+            <textarea class="screen" id="screen" disabled>0</textarea>
+        </div>
+
+        <div class="row">
+            <button class="button" onclick="clearScreen()">C</button>
+            <button class="button" id="button" onclick="deleteLastDigit()">DEL</button>
+            <button class="button" id="button">%</button>
+            <button class="button" id="button" onclick="populateDisplay('x')">x</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="populateDisplay('1')">1</button>
+            <button class="button" onclick="populateDisplay('2')">2</button>
+            <button class="button" onclick="populateDisplay('3')">3</button>
+            <button class="button" onclick="populateDisplay('/')">/</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="populateDisplay('4')">4</button>
+            <button class="button" onclick="populateDisplay('5')">5</button>
+            <button class="button" onclick="populateDisplay('6')">6</button>
+            <button class="button" onclick="populateDisplay('+')">+</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="populateDisplay('7')">7</button>
+            <button class="button" onclick="populateDisplay('8')">8</button>
+            <button class="button" onclick="populateDisplay('9')">9</button>
+            <button class="button" onclick="populateDisplay('-')">-</button>
+        </div>
+        <div class="row">
+            <button class="button" onclick="populateDisplay('.')">.</button>
+            <button class="button" onclick="populateDisplay('0')">0</button>
+            <button class="button">ANS</button>
+            <button class="button" onclick="processAnswer()">=</button>
+        </div>
+	</div>
+
+</body>
+
+<script src="js/main.js"></script>
+</html>
